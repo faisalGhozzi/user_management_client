@@ -14,4 +14,8 @@ export class UserService {
   addUser(data: any){
     return this.http.post(this.endpoint+"users", data);
   }
+
+  getUsers(){
+    return this.http.get(this.endpoint+"users");
+  }
 }

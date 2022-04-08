@@ -15,12 +15,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddUserComponent } from './add-user/add-user.component';
 import { HeaderComponent } from './header/header.component';
+import { ShowUsersComponent } from './show-users/show-users.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddUserComponent,
     HeaderComponent,
+    ShowUsersComponent,
+    UserDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,8 @@ import { HeaderComponent } from './header/header.component';
     MatInputModule,
     MatDialogModule,
     RouterModule.forRoot([
-      {path: 'add-user', component: AddUserComponent}
+      {path: 'add-user', component: AddUserComponent},
+      {path: 'show-users', component: ShowUsersComponent},
     ]),
   ],
   providers: [],
