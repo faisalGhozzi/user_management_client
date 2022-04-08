@@ -41,6 +41,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     RouterModule.forRoot([
       {path: 'add-user', component: AddUserComponent},
       {path: 'show-users', component: ShowUsersComponent},
+      {path: 'show-users/:id', component: UserDetailComponent},
     ]),
   ],
   providers: [],

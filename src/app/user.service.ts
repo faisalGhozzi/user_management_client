@@ -18,4 +18,8 @@ export class UserService {
   getUsers(){
     return this.http.get(this.endpoint+"users");
   }
+
+  getUser(id: any){
+    return this.http.get(this.endpoint+"users/"+id);
+  }
 }
