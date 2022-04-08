@@ -22,4 +22,8 @@ export class UserService {
   getUser(id: any){
     return this.http.get(this.endpoint+"users/"+id);
   }
+
+  updateUser(id: any, data: any){
+    return this.http.put(this.endpoint+"users/"+id, data);
+  }
 }

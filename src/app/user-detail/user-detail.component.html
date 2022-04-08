@@ -10,7 +10,7 @@
             <h3 class="card-title">{{ user.firstname }} {{ user.lastname }}</h3>
             <h4 class="card-subtitle mb-2 text-muted">{{ user.email }}</h4>
             <p class="card-text">Born on : {{ user.birthday }}</p>
-            <a href="#" class="card-link">Update</a>
+            <a routerLink="/update-user/{{ user.id }}" class="card-link">Update</a>
         </div>
     </div>
 </div>
