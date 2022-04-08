@@ -33,6 +33,8 @@ export class UpdateUserComponent implements OnInit {
       this.userForm.controls['lastname'].setValue(this.user.lastname)
       this.userForm.controls['email'].setValue(this.user.email)
       this.userForm.controls['birthday'].setValue(this.user.birthday)
+    }, error => {
+      this.router.navigate(['/error'])
     })
   }
 

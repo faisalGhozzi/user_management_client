@@ -7,10 +7,10 @@
 <div class="d-flex align-items-center justify-content-center">
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h3 class="card-title">{{ user.firstname }} {{ user.lastname }}</h3>
-            <h4 class="card-subtitle mb-2 text-muted">{{ user.email }}</h4>
-            <p class="card-text">Born on : {{ user.birthday }}</p>
-            <a routerLink="/update-user/{{ user.id }}" class="card-link">Update</a>
+            <h3 class="card-title">{{ firstname }} {{ lastname }}</h3>
+            <h4 class="card-subtitle mb-2 text-muted">{{ email }}</h4>
+            <p class="card-text">Born on : {{ birthday }}</p>
+            <a routerLink="/update-user/{{ id }}" class="card-link">Update</a>
         </div>
     </div>
 </div>

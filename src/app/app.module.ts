@@ -19,6 +19,7 @@ import { ShowUsersComponent } from './show-users/show-users.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     UserDetailComponent,
     UpdateUserComponent,
     HomePageComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,7 @@ import { HomePageComponent } from './home-page/home-page.component';
       {path: 'show-users', component: ShowUsersComponent},
       {path: 'show-users/:id', component: UserDetailComponent},
       {path: 'update-user/:id', component: UpdateUserComponent},
+      {path: 'error', component: ErrorPageComponent},
       {path: '', component:HomePageComponent}
     ]),
   ],
