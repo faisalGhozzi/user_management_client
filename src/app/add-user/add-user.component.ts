@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class AddUserComponent implements OnInit {
   userForm!: FormGroup;
   picker: any;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient, private service: UserService) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private service: UserService, private router:Router) { }
 
   ngOnInit(): void {
     this.userForm = this.formBuilder.group({
@@ -24,9 +25,10 @@ export class AddUserComponent implements OnInit {
   }
 
   addUser(){
-    this.service.addUser(this.userForm.value).subscribe(response => {
-      console.log(response);
+    this.service.addUser(this.userForm.value).subscribe(() => {
+      this.router.navigate(['/show-users'])
     })
+
   }
 
 

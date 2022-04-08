@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class UpdateUserComponent implements OnInit {
   id!: string;
   user: any;
 
-  constructor(private route: ActivatedRoute, private formBuilder: FormBuilder, private service: UserService) {
+  constructor(private route: ActivatedRoute, private formBuilder: FormBuilder, private service: UserService, private router:Router) {
     this.id = this.route.snapshot.paramMap.get('id') || '';
   }
 
@@ -37,8 +37,8 @@ export class UpdateUserComponent implements OnInit {
   }
 
   updateUser(){
-    this.service.updateUser(this.id, this.userForm.value).subscribe(response => {
-      console.log(response);
+    this.service.updateUser(this.id, this.userForm.value).subscribe(() => {
+      this.router.navigate(['/show-users'])
     })
   }
 
